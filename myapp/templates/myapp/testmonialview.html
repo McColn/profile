@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2><center>REGISTER TESTIMONIAL</center></h2>
+	{% for message in messages %}
+		{{message}}
+	{% endfor %}
+
+	
+    <form method="POST">
+    	{% csrf_token %}
+    	{{form}}
+    <button type="submit">Submit</button>
+    <button type="Submit"><a href="{% url 'home' %}">BACK</a> </button>
+
+    </form>
+</body>
+</html>
